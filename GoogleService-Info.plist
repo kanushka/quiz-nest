@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>914527178068-5svj6lq9dumtvbf56msi5ojqb5bbth0c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.914527178068-5svj6lq9dumtvbf56msi5ojqb5bbth0c</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>914527178068-2u66si2e2q8m7tvsh24mnv8l1v79hs3v.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA91YHlyMLgSSaMIquvqE1Nml-fDLhrLqE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>914527178068</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kanushka.quiznest</string>
+	<key>PROJECT_ID</key>
+	<string>quiz-nest-73adb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>quiz-nest-73adb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:914527178068:ios:c30df507310f36b7184cc1</string>
+</dict>
+</plist>

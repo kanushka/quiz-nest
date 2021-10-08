@@ -19,13 +19,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+       "bundleIdentifier": "com.kanushka.quiznest",
+       "config": {
+         "googleSignIn": {
+           "reservedClientId": "com.googleusercontent.apps.914527178068-5svj6lq9dumtvbf56msi5ojqb5bbth0c"
+         }
+       },
+       "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kanushka.quiznest",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
