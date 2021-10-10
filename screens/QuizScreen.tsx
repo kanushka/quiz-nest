@@ -64,10 +64,10 @@ export default function QuizScreen({ navigation }: RootTabScreenProps<"Quiz">) {
         }}
       >
         <VStack space={4} alignItems="center">
-          <QuizCard />
-          <QuizCard />
-          <QuizCard />
-          <QuizCard />
+          <QuizCard />;
+          <QuizCard />;
+          <QuizCard />;
+          <QuizCard />;
         </VStack>
       </ScrollView>
     </View>
