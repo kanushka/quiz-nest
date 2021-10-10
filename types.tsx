@@ -15,6 +15,7 @@ declare global {
 
 export type RootStackParamList = {
   Login: undefined;
+  Register: undefined;
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Setting: undefined;
   Modal: undefined;
@@ -36,3 +37,14 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
+
+export type Quiz = {
+  title: string;
+  description: string;
+  difficulty: string;
+  duration: string;
+  count: number;
+  owner: string;
+  rating: number;
+};
+

@@ -1,6 +1,7 @@
 import React from "react";
 import { Pressable, Box, Heading, Text, HStack, Stack } from "native-base";
 import { useNavigation } from "@react-navigation/native";
+import { Quiz } from "../types";
 
 export default function QuizCard() {
   const navigation = useNavigation();
@@ -35,7 +36,7 @@ export default function QuizCard() {
             <Stack p="4" space={3}>
               <Stack space={2}>
                 <Heading size="md" ml="-1">
-                  The Garden City
+                  Pop Quiz
                 </Heading>
                 <Text
                   fontSize="xs"
@@ -49,7 +50,7 @@ export default function QuizCard() {
                   ml="-0.5"
                   mt="-1"
                 >
-                  The Silicon Valley of India.
+                  Teacher Jon Doe
                 </Text>
               </Stack>
               <Text fontWeight="400">
@@ -70,7 +71,7 @@ export default function QuizCard() {
                     }}
                     fontWeight="400"
                   >
-                    6 mins ago
+                    15 min
                   </Text>
                 </HStack>
               </HStack>
