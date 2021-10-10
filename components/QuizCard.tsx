@@ -1,6 +1,7 @@
 import React from "react";
 import { Pressable, Box, Heading, Text, HStack, Stack } from "native-base";
 import { useNavigation } from "@react-navigation/native";
+import { Quiz } from "../types";
 
 export default function QuizCard() {
   const navigation = useNavigation();
