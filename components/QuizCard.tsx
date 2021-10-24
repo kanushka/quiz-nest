@@ -1,12 +1,25 @@
 import React from "react";
-import { Pressable, Box, Heading, Text, HStack, Stack } from "native-base";
+import {
+  Pressable,
+  Box,
+  Heading,
+  Text,
+  HStack,
+  Stack,
+  Badge,
+} from "native-base";
 import { useNavigation } from "@react-navigation/native";
 import { Quiz } from "../types";
 
-export default function QuizCard() {
+export interface QuizCardProps {
+  quiz: Quiz;
+}
+
+export default function QuizCard(props: QuizCardProps) {
   const navigation = useNavigation();
+  const { quiz } = props;
   return (
-    <Pressable onPress={() => navigation.navigate("Modal")}>
+    <Pressable onPress={() => navigation.navigate("QuizOverview")}>
       {({ isHovered, isFocused, isPressed }) => {
         return (
           <Box
@@ -36,28 +49,24 @@ export default function QuizCard() {
             <Stack p="4" space={3}>
               <Stack space={2}>
                 <Heading size="md" ml="-1">
-                  Pop Quiz
+                  {quiz.title}
                 </Heading>
                 <Text
                   fontSize="xs"
                   _light={{
-                    color: "violet.500",
+                    color: "blue.500",
                   }}
                   _dark={{
-                    color: "violet.400",
+                    color: "blue.400",
                   }}
                   fontWeight="500"
                   ml="-0.5"
                   mt="-1"
                 >
-                  Teacher Jon Doe
+                  {quiz.owner.username}
                 </Text>
               </Stack>
-              <Text fontWeight="400">
-                Bengaluru (also called Bangalore) is the center of India's
-                high-tech industry. The city is also known for its parks and
-                nightlife.
-              </Text>
+              <Text fontWeight="400">{quiz.description}</Text>
               <HStack
                 alignItems="center"
                 space={4}
@@ -71,9 +80,12 @@ export default function QuizCard() {
                     }}
                     fontWeight="400"
                   >
-                    15 min
+                    {quiz.duration}
                   </Text>
                 </HStack>
+                <Box bgColor="blue.200" borderRadius="full" px={4} pb={1}>
+                  <Text color="blue.800">{quiz.difficulty}</Text>
+                </Box>
               </HStack>
             </Stack>
           </Box>

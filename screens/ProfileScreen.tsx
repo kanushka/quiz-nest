@@ -20,11 +20,11 @@ export default function ProfileScreen() {
 
   useEffect(() => {
     const user = auth.currentUser;
-    console.log(`profile user`, user);
+    // console.log(`profile user`, user);
     if (user) {
       setUser(user);
       database.ref('/users/' + user.uid).once('value').then((snapshot) => {
-        console.log(`snapshot users: `, snapshot);
+        // console.log(`snapshot users: `, snapshot);
         setUsername((snapshot.val() && snapshot.val().username) || 'Anonymous');
       });
     }
@@ -41,7 +41,7 @@ export default function ProfileScreen() {
   };
 
   const getInitials = (name: any) => {
-    console.log(`getInitials:`, name)
+    // console.log(`getInitials:`, name)
     let nameSplit = String(name).toUpperCase().split(" ");
     let initials = "";
     if (nameSplit.length == 1) {
@@ -49,7 +49,7 @@ export default function ProfileScreen() {
     } else {
       initials = nameSplit[0].charAt(0) + nameSplit[1].charAt(0);
     }
-    console.log(`initials:`, initials)
+    // console.log(`initials:`, initials)
     return initials;
   };
 

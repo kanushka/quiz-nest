@@ -19,6 +19,7 @@
     "expo": "~42.0.1",
     "expo-app-auth": "~10.2.2",
     "expo-asset": "~8.3.2",
+    "expo-camera": "~11.2.2",
     "expo-constants": "~11.0.1",
     "expo-font": "~9.2.1",
     "expo-google-sign-in": "~9.2.1",

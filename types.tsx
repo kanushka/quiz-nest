@@ -6,6 +6,7 @@
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { int32ARGBColor } from 'react-native-svg';
 
 declare global {
   namespace ReactNavigation {
@@ -18,7 +19,9 @@ export type RootStackParamList = {
   Register: undefined;
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Setting: undefined;
-  Modal: undefined;
+  QuizOverview: undefined;
+  QuizTimeScreen: undefined;
+  QuizComplete: undefined;
   NotFound: undefined;
 };
 
@@ -38,13 +41,35 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
   NativeStackScreenProps<RootStackParamList>
 >;
 
+export type User = {
+  id?: string;
+  email: string;
+  username: string;
+};
+
 export type Quiz = {
+  id?: string;
   title: string;
   description: string;
   difficulty: string;
   duration: string;
   count: number;
-  owner: string;
+  owner: User;
   rating: number;
+  attempts: number;
 };
 
+export type Question = {
+  id: string;
+  img?: string;
+  type: string; // single, multiple, text, image
+  description: string;
+  answers?: Answer[];
+};
+
+export type Answer = {
+  id: string;
+  img?: string;
+  title: string;
+  isCorrect: boolean;
+};
